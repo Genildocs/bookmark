@@ -2,6 +2,13 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      sm: '450px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+    },
     extend: {
       colors: {
         // ### Primary
@@ -14,6 +21,10 @@ export default {
 
       fontFamily: {
         Rubik: ['Rubik', 'sans-serif'],
+      },
+
+      gridTemplateColumns: {
+        S: 'repeat(1, minmax(2rem, 1fr))',
       },
     },
   },

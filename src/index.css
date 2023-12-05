@@ -6,3 +6,8 @@ body {
   @apply font-Rubik;
   @apply h-screen;
 }
+
+main {
+  @apply grid;
+  @apply grid-cols-S;
+}
