@@ -11,3 +11,10 @@ main {
   @apply grid;
   @apply grid-cols-S;
 }
+
+a {
+  @apply w-[20rem];
+  @apply border-white;
+  @apply border-solid;
+  @apply border-t-2;
+}
