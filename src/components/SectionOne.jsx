@@ -1,5 +1,11 @@
 import React from "react";
-
+import Hero from "../svg/Hero";
 export default function SectionOne() {
-  return <div>SectionOne</div>;
+  return (
+    <div>
+      <div>
+        <Hero />
+      </div>
+    </div>
+  );
 }

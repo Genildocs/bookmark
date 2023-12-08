@@ -14,9 +14,6 @@ export default function Nav() {
       justifyContent: "space-between",
       position: "absolute",
       backgroundColor: "hsl(229, 31%, 21%)",
-      height: "100vh",
-      width: "100%",
-      overflow: "hidden",
     },
     hidden: {
       display: "block",
@@ -28,6 +25,7 @@ export default function Nav() {
       initial={false}
       animate={open ? "visible" : "hidden"}
       variants={navVariants}
+      className={`${open ? "h-screen w-full" : ""}`}
     >
       <div className="flex justify-between mt-11 ml-8 mr-8">
         <div>
