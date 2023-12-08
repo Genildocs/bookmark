@@ -11,7 +11,7 @@ export default function Nav() {
     visible: {
       display: "flex",
       flexDirection: "column",
-      justifyContent: "space-around",
+      justifyContent: "space-between",
       position: "absolute",
       backgroundColor: "hsl(229, 31%, 21%)",
       height: "100vh",
@@ -22,6 +22,7 @@ export default function Nav() {
       display: "block",
     },
   };
+
   return (
     <motion.nav
       initial={false}
@@ -44,6 +45,17 @@ export default function Nav() {
               height: ["0.3rem"],
               marginBottom: ["0.3rem"],
             }}
+            animate={
+              open
+                ? {
+                    rotate: 40,
+                    backgroundColor: "white",
+                    x: 2,
+                    y: 0,
+                  }
+                : { x: 0 }
+            }
+            transition={{ duration: 0.2 }}
           ></motion.div>
           <motion.div
             style={{
@@ -52,6 +64,7 @@ export default function Nav() {
               height: ["0.3rem"],
               marginBottom: ["0.3rem"],
             }}
+            animate={open ? { display: "none" } : { display: "block" }}
           ></motion.div>
           <motion.div
             style={{
@@ -59,6 +72,17 @@ export default function Nav() {
               width: ["1.2rem"],
               height: ["0.3rem"],
             }}
+            animate={
+              open
+                ? {
+                    rotate: -45,
+                    backgroundColor: "white",
+                    x: 1,
+                    y: -10,
+                  }
+                : { x: 0 }
+            }
+            transition={{ duration: 0.2 }}
           ></motion.div>
         </button>
       </div>
@@ -88,7 +112,7 @@ export default function Nav() {
           </ul>
         </div>
       </motion.div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mb-12">
         <div className=" mr-8">
           <Facebook />
         </div>
