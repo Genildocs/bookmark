@@ -5,6 +5,7 @@
 body {
   @apply font-Rubik;
   @apply h-screen;
+  @apply overflow-hidden;
 }
 
 main {

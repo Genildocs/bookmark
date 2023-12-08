@@ -28,7 +28,6 @@ export default function Nav() {
       initial={false}
       animate={open ? "visible" : "hidden"}
       variants={navVariants}
-      transition={{ type: "Inertia", stiffness: 100 }}
     >
       <div className="flex justify-between mt-11 ml-8 mr-8">
         <div>
@@ -94,21 +93,25 @@ export default function Nav() {
       >
         <div className=" uppercase text-center text-xl mt-10 ">
           <ul className="flex flex-col items-center">
-            <a href="#">
+            <motion.a href="#" whileHover={{ color: "hsl(0, 94%, 66%)" }}>
               <li className=" p-5">Features</li>
-            </a>
-            <a href="#">
+            </motion.a>
+            <motion.a href="#" whileHover={{ color: "hsl(0, 94%, 66%)" }}>
               <li className=" p-5">pricing</li>
-            </a>
-            <a href="#">
+            </motion.a>
+            <motion.a href="#" whileHover={{ color: "hsl(0, 94%, 66%)" }}>
               <li className=" p-5">contact</li>
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#"
               className="btn text-xl font-medium rounded-md border-2 py-4"
+              whileHover={{
+                border: "2px solid  hsl(0, 94%, 66%)",
+                color: "hsl(0, 94%, 66%)",
+              }}
             >
               Login
-            </a>
+            </motion.a>
           </ul>
         </div>
       </motion.div>
